@@ -7,6 +7,12 @@ QuantLab is an interactive quantitative finance analytics platform built using P
 The platform enables users to price financial derivatives using multiple quantitative models, analyze option trading strategies, and compare model outputs through interactive dashboards and visualizations.
 
 ---
+## Live Demo
+
+🚀 Live Application: https://your-streamlit-url.streamlit.app
+
+---
+
 
 ## Features
 
