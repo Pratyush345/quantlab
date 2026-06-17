@@ -9,7 +9,7 @@ The platform enables users to price financial derivatives using multiple quantit
 ---
 ## Live Demo
 
-🚀 Live Application: https://your-streamlit-url.streamlit.app
+🚀 Live Application: https://pratyush345-quantlab-streamlit-app-ounm31.streamlit.app/
 
 ---
 
