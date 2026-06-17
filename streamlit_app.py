@@ -30,8 +30,8 @@ def get_historical_data(ticker):
 def get_current_price(ticker):
     return 100.0
 
-# Ignore the Streamlit warning for using st.pyplot()
-st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
 st.sidebar.title("📊 QuantLab")
 st.sidebar.markdown("---")
 
