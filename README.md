@@ -1,116 +1,184 @@
-# Option Pricing Models
+# QuantLab
 
-## Introduction
-This repository contains a simple web app for calculating European option prices using three different methods:
+## Quantitative Finance Analytics Platform
 
-1. Black-Scholes model
-2. Monte Carlo simulation
-3. Binomial model
+QuantLab is an interactive quantitative finance analytics platform built using Python and Streamlit.
 
-The app is implemented in Python 3.9 and uses the Streamlit library for visualization.
+The platform enables users to price financial derivatives using multiple quantitative models, analyze option trading strategies, and compare model outputs through interactive dashboards and visualizations.
 
-## Option Pricing Methods
-
-### 1. Black-Scholes Model
-A mathematical model used to calculate the theoretical price of European-style options, based on factors like current stock price, strike price, time to expiration, risk-free rate, and volatility.
-
-### 2. Monte Carlo Simulation
-A probabilistic method that uses random sampling to estimate option prices by simulating multiple possible price paths of the underlying asset.
-
-### 3. Binomial Model
-A discrete-time model that represents the evolution of the underlying asset's price as a binomial tree, allowing for the calculation of option prices at different time steps.
+---
 
 ## Features
 
-- Fetches latest stock price data from Yahoo Finance API using pandas-datareader
-- Caches data using requests-cache to avoid duplicate API calls
-- Allows users to input various parameters:
-  - Strike price
-  - Risk-free rate (%)
-  - Sigma (Volatility) (%)
-  - Exercise date
-- Calculates option prices based on user inputs
-- Provides a user-friendly interface for testing different scenarios
+### Option Pricing Models
+
+- Black-Scholes Pricing
+- Monte Carlo Pricing
+- Binomial Tree Pricing
+
+### Strategy Analytics Dashboard
+
+Supports:
+
+- Long Call
+- Long Put
+- Straddle
+- Strangle
+
+Includes:
+- Payoff diagrams
+- Risk metrics
+- Interactive visualizations
+
+### Model Comparison Dashboard
+
+Compare option prices generated using:
+
+- Black-Scholes Model
+- Monte Carlo Simulation
+- Binomial Tree Model
+
+Features:
+- Comparison table
+- Comparison chart
+- Performance metrics
+
+---
+
+## Technology Stack
+
+- Python
+- Streamlit
+- NumPy
+- Pandas
+- Matplotlib
+
+---
+
+## Screenshots
+
+### Home Dashboard
+
+![Home Dashboard](assets/home.png)
+
+---
+
+### Black-Scholes Pricing Engine
+
+![Black-Scholes Pricing](assets/black_scholes.png)
+
+Features:
+- Option pricing using the Black-Scholes model
+- Adjustable market parameters
+- Call and put option valuation
+- Historical price visualization
+
+---
+
+### Monte Carlo Pricing Engine
+
+![Monte Carlo](assets/monte_carlo.png)
+
+Features:
+- Simulation-based option pricing
+- Random path generation
+- Parameter sensitivity analysis
+- Interactive visualizations
+
+---
+
+### Binomial Tree Pricing Engine
+
+![Binomial Tree](assets/binomial.png)
+
+Features:
+- Discrete-time option pricing
+- Call and put valuation
+- Adjustable tree parameters
+- Comparative pricing analysis
+
+---
+
+### Strategy Analytics Dashboard
+
+![Strategy Analytics](assets/strategy.png)
+
+Supported Strategies:
+- Long Call
+- Long Put
+- Straddle
+- Strangle
+
+Includes:
+- Payoff diagrams
+- Risk metrics
+- Interactive strategy analysis
+
+---
+
+### Model Comparison Dashboard
+
+![Model Comparison](assets/comparison.png)
+
+Includes:
+- Black-Scholes comparison
+- Monte Carlo comparison
+- Binomial Tree comparison
+- Comparative pricing charts
+- Performance metrics
+
+---
 
 ## Project Structure
 
-- `demo/`: Contains GIF files demonstrating the Streamlit app
-- `option_pricing/`: Python package containing model implementations
-- `streamlit_app.py`: Main script for the Streamlit web app
-- `Requirements.txt`: List of required Python packages
-- `Dockerfile`: Configuration for running the app in a Docker container
+```text
+QuantLab
+│
+├── Home Dashboard
+├── Black-Scholes Pricing Engine
+├── Monte Carlo Pricing Engine
+├── Binomial Tree Pricing Engine
+├── Strategy Analytics Dashboard
+└── Model Comparison Dashboard
+```
 
-## How to Run the App
+---
 
-### Using Docker Locally
-The easiest way to run the app is using Docker. Make sure you have Docker installed on your machine before proceeding.
+## Installation
 
-1. Navigate to the repository directory in your terminal.
+```bash
+pip install -r requirements.txt
+```
 
-2. Build the Docker image:
-   ```
-   docker build -t options-pricing:latest .
-   ```
+## Run Application
 
-3. Verify the image was built successfully:
-   ```
-   docker image ls
-   ```
+```bash
+streamlit run streamlit_app.py
+```
 
-4. Run the Docker container:
-   ```
-   docker run -p 8080:8080 options-pricing:latest
-   ```
+---
 
-5. Access the app in your web browser at:
-   ```
-   http://0.0.0.0:8080/
-   ```
+## Key Highlights
 
-### Using Google Cloud
+- Interactive quantitative finance platform
+- Multiple option pricing methodologies
+- Strategy payoff visualization
+- Comparative model analysis
+- Dashboard-driven user experience
+- Real-time parameter sensitivity analysis
 
-To deploy the Docker container to Google Cloud Platform (GCP), follow these steps:
+---
 
-1. Prerequisites:
-   - Have a Google account
-   - Create a project on Google Cloud Console
-   - Set up billing for your project (be aware of GCP's pricing structure)
-   - Install and set up Google Cloud SDK
+## Future Enhancements
 
-2. Verify and set your GCP project:
-   - Check the current project:
-     ```
-     gcloud config get-value project
-     ```
-   - Set a different project if needed:
-     ```
-     gcloud config set project YOUR_PROJECT_NAME
-     ```
+- Option Greeks Analysis
+- Volatility Surface Visualization
+- American Option Pricing Models
+- Live Market Data Integration
+- Portfolio Risk Analytics
 
-3. Deploy the application:
-   - Run the following command (uses the app.yaml file in your project):
-     ```
-     gcloud app deploy
-     ```
-   - Select the nearest server location when prompted
-   - Wait for the deployment process to complete
+---
 
-4. Access your web app:
-   - After deployment, you'll receive a URL for your app
-   - The URL format will be: https://YOUR_PROJECT_NAME.REGION.r.appspot.com/
-   - You can also find this URL in the Google Cloud Console
+## Author
 
-Note: Ensure you understand GCP's pricing before deploying to avoid unexpected charges.
-
-## Streamlit Web App Demonstrations
-
-### Black-Scholes Model
-![black-scholes-demo](media/Black_Scholes_Model.gif)
-
-### Monte Carlo Option Pricing
-![monte-carlo-demo](media/Monte_Carlo_Option_Pricing.gif)
-
-### Binomial Model
-![binomial-tree-demo](media/Binomial_Model.gif)
-
-By following these instructions, you can easily set up and explore the option pricing models using the Streamlit web app. Feel free to experiment with different parameters and see how they affect the calculated option prices.
+**Pratyush Jha**
